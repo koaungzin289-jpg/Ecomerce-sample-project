@@ -1,3 +1,20 @@
+// navbar slider start
+const slider = document.querySelector(".slider");
+const navItem = document.getElementsByClassName("nav-item");
+for (let i = 0; i < navItem.length; i++) {
+  navItem[i].addEventListener("click", (e) => {
+    const targetTab = e.target;
+    slider.style.left = targetTab.offsetLeft + "px";
+    slider.style.width = targetTab.offsetWidth + "px";
+  });
+  if (i === 0) {
+    slider.style.left = navItem[i].offsetLeft + "px";
+    slider.style.width = navItem[i].offsetWidth + "px";
+  }
+}
+
+// navbar slide end
+// carousel start
 const carouselInner = document.querySelector(".carousel-inner");
 const originalSlides = document.querySelectorAll(".carousel-item");
 const dots = document.querySelectorAll(".dot");
@@ -68,3 +85,4 @@ carouselInner.addEventListener("transitionend", () => {
 setInterval(() => {
   moveSlides(1);
 }, 3000);
+// carousel end

@@ -48,32 +48,25 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  justify-content: center;
+  gap: 2rem;
   margin-left: 15rem;
+}
+.navbar-menu {
+  position: relative;
+}
+.slider {
+  height: 4px;
+  background: var(--secondary-color);
+  position: relative;
+  transition: all 0.5s ease-in-out;
 }
 .navbar .navbar-menu ul li {
   cursor: pointer;
   position: relative;
   opacity: 0.8;
 }
-.navbar .navbar-menu ul li:hover,
-.navbar .navbar-menu ul .active {
-  opacity: 1;
-}
-.navbar .navbar-menu ul li::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 5px;
-  left: 0px;
-  bottom: -5px;
-  background-color: var(--secondary-color);
-  transition: 0.5s;
-}
-.navbar .navbar-menu ul li:hover:after,
-.navbar .navbar-menu ul .active::after {
-  width: 100%;
-}
+
 .navbar .navbar-btn {
   display: flex;
   flex-direction: row;
