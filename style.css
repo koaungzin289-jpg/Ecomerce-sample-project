@@ -27,7 +27,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8%;
+  padding: 15px 8%;
 }
 .navbar .navbar-logo h1 {
   font-weight: 600;
@@ -49,8 +49,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
-  margin-left: 15rem;
+  gap: 5rem;
+  /* margin-left: 15rem; */
 }
 .navbar-menu {
   position: relative;
@@ -59,19 +59,29 @@
   height: 4px;
   background: var(--secondary-color);
   position: relative;
-  transition: all 0.5s ease-in-out;
 }
 .navbar .navbar-menu ul li {
   cursor: pointer;
   position: relative;
-  opacity: 0.8;
 }
-
+.navbar .navbar-menu ul li::after {
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: all 0.5s ease-in-out;
+}
+.navbar .navbar-menu ul li:hover::after {
+  width: 100%;
+}
 .navbar .navbar-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 .navbar .navbar-btn i {
   font-size: 20px;
