@@ -1,11 +1,25 @@
+// main start
+const mainPage = document.querySelectorAll("main");
+const changePage = (e) => {
+  const id = e.target.dataset.page;
+  mainPage.forEach((page) => {
+    page.classList.remove("active");
+  });
+  document.getElementById(id).classList.add("active");
+};
+// main end
 // navbar slider start
 const slider = document.querySelector(".slider");
 const navItem = document.getElementsByClassName("nav-item");
+const handleChange = (e) => {
+  const targetTab = e.target;
+  slider.style.left = targetTab.offsetLeft + "px";
+  slider.style.width = targetTab.offsetWidth + "px";
+};
 for (let i = 0; i < navItem.length; i++) {
   navItem[i].addEventListener("click", (e) => {
-    const targetTab = e.target;
-    slider.style.left = targetTab.offsetLeft + "px";
-    slider.style.width = targetTab.offsetWidth + "px";
+    handleChange(e);
+    changePage(e);
   });
   if (i === 0) {
     slider.style.left = navItem[i].offsetLeft + "px";
@@ -14,6 +28,7 @@ for (let i = 0; i < navItem.length; i++) {
 }
 
 // navbar slide end
+
 // carousel start
 const carouselInner = document.querySelector(".carousel-inner");
 const originalSlides = document.querySelectorAll(".carousel-item");

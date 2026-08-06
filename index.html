@@ -15,353 +15,386 @@
 </head>
 
 <body>
-    <!-- home section start -->
+
     <!-- navbar section start-->
     <nav class="navbar">
         <div class="navbar-logo">
             <h1>Funi</h1>
         </div>
-        <div class="navbar-menu">
-            <ul>
-                <li class="active nav-item">Home</li>
-                <li class="nav-item">Shop</li>
-                <li class="nav-item">About us</li>
-                <li class="nav-item">Service</li>
-                <li class="nav-item">Blog</li>
-                <li class="nav-item">Contact us</li>
-            </ul>
-            <div class="slider"></div>
+        <div class="navbar-content">
+            <div class="navbar-menu">
+                <ul>
+                    <li data-page="home-page" class="active nav-item">Home</li>
+                    <li data-page="shop-page" class="nav-item">Shop</li>
+                    <li data-page="about-page" class="nav-item">About us</li>
+                    <li data-page="service-page" class="nav-item">Service</li>
+                    <li data-page="blog-page" class="nav-item">Blog</li>
+                    <li data-page="contact-page" class="nav-item">Contact us</li>
+                </ul>
+                <div class="slider"></div>
+            </div>
+            <div class="navbar-btn">
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
         </div>
-        <div class="navbar-btn">
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
+        <div class="hambager-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </nav>
     <!-- navbar section end -->
-    <div class="home">
-        <div class="home-text">
-            <h3 class="heading">Modern Interior Design Studio</h3>
-            <p>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
-                Aliquam vulputate velit imperdiet dolor tempor tristique.
-            </p>
-            <div class="btn-group">
-                <button class="btn btn-shop">Shop Now</button>
-                <button class="btn btn-explore">Explore</button>
-            </div>
-        </div>
-        <div class="home-photo">
-            <img src="./images/cover_photo.png" alt="Cover Photo" />
-        </div>
-    </div>
-    <!-- home section end -->
-    <!-- Material section start -->
-    <div class="materials">
-        <div class="material-content">
-            <h3 class="content-heading">Crafted with excellent material.</h3>
-            <p>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
-                Aliquam vulputate velit imperdiet dolor tempor tristique.
-            </p>
-            <button class="btn explore">Explore</button>
-        </div>
-        <div class="material-products">
-            <div class="material-img">
-                <img src="./images/product-1.png" alt="product-1" />
-                <div class="price">
-                    <span>Nordic Chair</span>
-                    <h3>$50.00</h3>
+    <!-- main section start -->
+    <main id="home-page" class="active">
+        <!-- home section start -->
+        <div class="home">
+            <div class="home-text">
+                <h3 class="heading">Modern Interior Design Studio</h3>
+                <p>
+                    Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                    Aliquam vulputate velit imperdiet dolor tempor tristique.
+                </p>
+                <div class="btn-group">
+                    <button class="btn btn-shop">Shop Now</button>
+                    <button class="btn btn-explore">Explore</button>
                 </div>
-                <i class="fa-solid fa-circle-plus"></i>
             </div>
-            <div class="material-img">
-                <img src="./images/product-2.png" alt="product-2" />
-                <div class="price">
-                    <span>Kurozo Aero Chair</span>
-                    <h3>$78.00</h3>
-                </div>
-                <i class="fa-solid fa-circle-plus"></i>
-            </div>
-            <div class="material-img">
-                <img src="./images/product-3.png" alt="product-3" />
-                <div class="price">
-                    <span>Argonomic Chair</span>
-                    <h3>$43.00</h3>
-                </div>
-                <i class="fa-solid fa-circle-plus"></i>
+            <div class="home-photo">
+                <img src="./images/cover_photo.png" alt="Cover Photo" />
             </div>
         </div>
-    </div>
-    <!-- Material section end -->
-    <!-- why choose us section start -->
-    <div class="why-us">
-        <div class="content-container">
-            <h3 class="why-heading">Why Choose Us</h3>
-            <p>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
-                Aliquam vulputate velit imperdiet dolor tempor tristique.
-            </p>
-            <div class="why-content fast">
-                <img src="./images/truck.svg" alt="" />
-                <h5>Fast & Free Shipping</h5>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
-                Aliquam vulputate.
+        <!-- home section end -->
+        <!-- Material section start -->
+        <div class="materials">
+            <div class="material-content">
+                <h3 class="content-heading">Crafted with excellent material.</h3>
+                <p>
+                    Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                    Aliquam vulputate velit imperdiet dolor tempor tristique.
+                </p>
+                <button class="btn explore">Explore</button>
             </div>
-            <div class="why-content easy">
-                <img src="./images/bag.svg" alt="" />
-                <h5>Easy to Shop</h5>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
-                Aliquam vulputate.
+            <div class="material-products">
+                <div class="material-img">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <div class="price">
+                        <span>Nordic Chair</span>
+                        <h3>$50.00</h3>
+                    </div>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="material-img">
+                    <img src="./images/product-2.png" alt="product-2" />
+                    <div class="price">
+                        <span>Kurozo Aero Chair</span>
+                        <h3>$78.00</h3>
+                    </div>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="material-img">
+                    <img src="./images/product-3.png" alt="product-3" />
+                    <div class="price">
+                        <span>Argonomic Chair</span>
+                        <h3>$43.00</h3>
+                    </div>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
             </div>
-            <div class="why-content support">
-                <img src="./images/support.svg" alt="" />
-                <h5>24/7 Support</h5>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
-                Aliquam vulputate.
+        </div>
+        <!-- Material section end -->
+        <!-- why choose us section start -->
+        <div class="why-us">
+            <div class="content-container">
+                <h3 class="why-heading">Why Choose Us</h3>
+                <p>
+                    Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                    Aliquam vulputate velit imperdiet dolor tempor tristique.
+                </p>
+                <div class="why-content fast">
+                    <img src="./images/truck.svg" alt="" />
+                    <h5>Fast & Free Shipping</h5>
+                    Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                    Aliquam vulputate.
+                </div>
+                <div class="why-content easy">
+                    <img src="./images/bag.svg" alt="" />
+                    <h5>Easy to Shop</h5>
+                    Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                    Aliquam vulputate.
+                </div>
+                <div class="why-content support">
+                    <img src="./images/support.svg" alt="" />
+                    <h5>24/7 Support</h5>
+                    Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                    Aliquam vulputate.
+                </div>
+                <div class="why-content return">
+                    <img src="./images/return.svg" alt="" />
+                    <h5>Hassle Free Returns</h5>
+                    Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                    Aliquam vulputate.
+                </div>
             </div>
-            <div class="why-content return">
-                <img src="./images/return.svg" alt="" />
-                <h5>Hassle Free Returns</h5>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
-                Aliquam vulputate.
+
+            <div class="why-img">
+                <img src="./images/why-choose-us-img.jpg" alt="" />
+            </div>
+        </div>
+        <!-- why choose us section end -->
+        <!-- Modern deisgn section start -->
+        <div class="modern-section">
+            <div class="modern-photo">
+                <img src="./images/img-grid-1.jpg" alt="" class="grid-1" />
+                <img src="./images/img-grid-2.jpg" alt="" class="grid-2" />
+                <img src="./images/img-grid-3.jpg" alt="" class="grid-3" />
+            </div>
+            <div class="modern-content">
+                <h3 class="modern-heading">We Help You Make Modern Interior Design</h3>
+                <p>
+                    Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
+                    nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
+                    velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada
+                </p>
+                <ul>
+                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
+                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
+                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
+                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
+                </ul>
+                <button class="btn explore">Explore</button>
             </div>
         </div>
 
-        <div class="why-img">
-            <img src="./images/why-choose-us-img.jpg" alt="" />
+        <!-- Modern deisgn section end -->
+        <!-- popular products section start -->
+        <div class="popular-products">
+            <div class="card">
+                <div class="card-img">
+                    <img src="./images/product-1.png" alt="" />
+                </div>
+                <div class="card-content">
+                    <span class="card-content-heading">Nordic Chair</span>
+                    <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
+                    <span class="card-content-footer">Read More</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="./images/product-2.png" alt="" />
+                </div>
+                <div class="card-content">
+                    <span class="card-content-heading"> Kruzo Aero Chair</span>
+                    <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
+                    <span class="card-content-footer">Read More</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="./images/product-3.png" alt="" />
+                </div>
+                <div class="card-content">
+                    <span class="card-content-heading">Ergonomic Chair</span>
+                    <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
+                    <span class="card-content-footer">Read More</span>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- why choose us section end -->
-    <!-- Modern deisgn section start -->
-    <div class="modern-section">
-        <div class="modern-photo">
-            <img src="./images/img-grid-1.jpg" alt="" class="grid-1" />
-            <img src="./images/img-grid-2.jpg" alt="" class="grid-2" />
-            <img src="./images/img-grid-3.jpg" alt="" class="grid-3" />
+        <!-- popular products section end -->
+        <!-- about us start-->
+        <div class="aboutus">
+            <h3 class="about-heading">Testimonials</h3>
+            <div class="carousel-container">
+                <div class="carousel-inner">
+                    <div class="carousel-item" id="content1">
+                        <p>
+                            “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
+                            nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
+                            velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
+                            tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Integer convallis volutpat dui quis scelerisque.”
+                        </p>
+                        <div class="profile">
+                            <img src="./images/person-1.png" alt="" />
+                            <span class="name">Maria Jones</span>
+                            <span class="position">CEO, Co-Founder, XYZ Inc.</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="content2">
+                        <p>
+                            “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
+                            nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
+                            velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
+                            tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Integer convallis volutpat dui quis scelerisque.”
+                        </p>
+                        <div class="profile">
+                            <img src="./images/person-1.png" alt="" />
+                            <span class="name">Maria Jones</span>
+                            <span class="position">CEO, Co-Founder, XYZ Inc.</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="content3">
+                        <p>
+                            “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
+                            nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
+                            velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
+                            tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Integer convallis volutpat dui quis scelerisque.”
+                        </p>
+                        <div class="profile">
+                            <img src="./images/person-1.png" alt="" />
+                            <span class="name">Maria Jones</span>
+                            <span class="position">CEO, Co-Founder, XYZ Inc.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="control-btn"> <i class="fa-solid fa-chevron-left" id="prev"
+                            onclick="moveSlides(-1)"></i></button>
+                    <button class="control-btn"> <i class="fa-solid fa-chevron-right" id="next"
+                            onclick="moveSlides(1)"></i></button>
+                </div>
+                <div class="indicators">
+                    <div class="dot active" onclick="currentSlide(1)"></div>
+                    <div class="dot" onclick="currentSlide(2)"></div>
+                    <div class="dot" onclick="currentSlide(3)"></div>
+                </div>
+            </div>
         </div>
-        <div class="modern-content">
-            <h3 class="modern-heading">We Help You Make Modern Interior Design</h3>
-            <p>
-                Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
-                nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
-                velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
-                tristique senectus et netus et malesuada
+        <!-- about us end -->
+        <!-- blog start -->
+        <div class="blog">
+            <div class="blog-heading">
+                <h3>Recent Blog</h3>
+                <a href="#">View All Posts</a>
+            </div>
+            <div class="blog-photo">
+                <div class="container">
+                    <div class="img-container">
+                        <img src="./images/post-1.jpg" alt="" />
+                    </div>
+                    <div class="container-text">
+                        <a href="#">First Time Home Owner Ideas <br />
+                            <span>by</span> Kristin Watson <span>on</span> Dec 19, 2021
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="img-container">
+                        <img src="./images/post-2.jpg" alt="" />
+                    </div>
+                    <div class="container-text">
+                        <a href="#">How To Keep Your Furniture Clean <br />
+                            <span>by</span> Robert Fox <span>on</span> Dec 15, 2021
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="img-container">
+                        <img src="./images/post-3.jpg" alt="" />
+                    </div>
+                    <div class="container-text">
+                        <a href="#">Small Space Furniture Apartment Ideas <br />
+                            <span>by</span> Kristin Watson <span>on</span> Dec 12, 2021</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- blog end -->
+    </main>
+    <main id="shop-page">
+        <h3>This is Shop Page</h3>
+    </main>
+    <main id="about-page">
+        <h3>This is About Page</h3>
+    </main>
+    <main id="service-page">
+        <h3> This is Service Page</h3>
+    </main>
+    <main id="blog-page">
+        <h3>This is Blog Page</h3>
+    </main>
+    <main id="contact-page">
+        <h3> This is Contact Page</h3>
+    </main>
+    <!-- main section end -->
+    <!-- footer section start -->
+    <footer>
+        <div class="contact">
+            <div class="contact-form">
+                <h3 class="form-header"><i class="fa-regular fa-envelope"></i>Subscribe to Newsletter</h3>
+                <div class="form-body">
+                    <input type="text" class="name" placeholder="Enter your name">
+                    <input type="email" class="emial" placeholder="Enter your email">
+                    <button class="send-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+                </div>
+
+            </div>
+            <div class="img-div">
+                <img src="./images/sofa.png" alt="">
+            </div>
+
+        </div>
+        <!-- Contact us end -->
+        <!-- funi start -->
+        <div class="funi">
+            <div class="funi-content">
+                <h3>Funi.</h3>
+                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam
+                    ac
+                    aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+                <div class="social">
+                    <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="icon"> <i class="fa-brands fa-instagram"></i></div>
+                    <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                </div>
+            </div>
+            <div class="menu-list">
+                <ul class="menu-one">
+                    <li>About us</li>
+                    <li>Services</li>
+                    <li>Blog</li>
+                    <li>Contact us</li>
+                </ul>
+                <ul class="menu-two">
+                    <li>Support</li>
+                    <li>Knowledge base</li>
+                    <li>Live chat</li>
+                </ul>
+                <ul class="menu-three">
+                    <li>Jobs</li>
+                    <li>Our team</li>
+                    <li>Leadership</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <ul class="menu-four">
+                    <li>Nordic Chair</li>
+                    <li>Kruzo Aero</li>
+                    <li>Ergonomic Chair</li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- funi end -->
+        <!-- footer start -->
+        <div class="footer">
+            <p>Copyright ©2026. All Rights Reserved. — Designed with love by <a href="#">Untree.co</a>
+
             </p>
             <ul>
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
-            </ul>
-            <button class="btn explore">Explore</button>
-        </div>
-    </div>
-
-    <!-- Modern deisgn section end -->
-    <!-- popular products section start -->
-    <div class="popular-products">
-        <div class="card">
-            <div class="card-img">
-                <img src="./images/product-1.png" alt="" />
-            </div>
-            <div class="card-content">
-                <span class="card-content-heading">Nordic Chair</span>
-                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
-                <span class="card-content-footer">Read More</span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="./images/product-2.png" alt="" />
-            </div>
-            <div class="card-content">
-                <span class="card-content-heading"> Kruzo Aero Chair</span>
-                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
-                <span class="card-content-footer">Read More</span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="./images/product-3.png" alt="" />
-            </div>
-            <div class="card-content">
-                <span class="card-content-heading">Ergonomic Chair</span>
-                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
-                <span class="card-content-footer">Read More</span>
-            </div>
-        </div>
-    </div>
-    <!-- popular products section end -->
-    <!-- about us start-->
-    <div class="aboutus">
-        <h3 class="about-heading">Testimonials</h3>
-        <div class="carousel-container">
-            <div class="carousel-inner">
-                <div class="carousel-item" id="content1">
-                    <p>
-                        “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
-                        nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
-                        velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
-                        tristique senectus et netus et malesuada fames ac turpis egestas.
-                        Integer convallis volutpat dui quis scelerisque.”
-                    </p>
-                    <div class="profile">
-                        <img src="./images/person-1.png" alt="" />
-                        <span class="name">Maria Jones</span>
-                        <span class="position">CEO, Co-Founder, XYZ Inc.</span>
-                    </div>
-                </div>
-                <div class="carousel-item" id="content2">
-                    <p>
-                        “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
-                        nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
-                        velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
-                        tristique senectus et netus et malesuada fames ac turpis egestas.
-                        Integer convallis volutpat dui quis scelerisque.”
-                    </p>
-                    <div class="profile">
-                        <img src="./images/person-1.png" alt="" />
-                        <span class="name">Maria Jones</span>
-                        <span class="position">CEO, Co-Founder, XYZ Inc.</span>
-                    </div>
-                </div>
-                <div class="carousel-item" id="content3">
-                    <p>
-                        “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
-                        nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
-                        velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
-                        tristique senectus et netus et malesuada fames ac turpis egestas.
-                        Integer convallis volutpat dui quis scelerisque.”
-                    </p>
-                    <div class="profile">
-                        <img src="./images/person-1.png" alt="" />
-                        <span class="name">Maria Jones</span>
-                        <span class="position">CEO, Co-Founder, XYZ Inc.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="controls">
-                <button class="control-btn"> <i class="fa-solid fa-chevron-left" id="prev"
-                        onclick="moveSlides(-1)"></i></button>
-                <button class="control-btn"> <i class="fa-solid fa-chevron-right" id="next"
-                        onclick="moveSlides(1)"></i></button>
-            </div>
-            <div class="indicators">
-                <div class="dot active" onclick="currentSlide(1)"></div>
-                <div class="dot" onclick="currentSlide(2)"></div>
-                <div class="dot" onclick="currentSlide(3)"></div>
-            </div>
-        </div>
-    </div>
-    <!-- about us end -->
-    <!-- blog start -->
-    <div class="blog">
-        <div class="blog-heading">
-            <h3>Recent Blog</h3>
-            <a href="#">View All Posts</a>
-        </div>
-        <div class="blog-photo">
-            <div class="container">
-                <div class="img-container">
-                    <img src="./images/post-1.jpg" alt="" />
-                </div>
-                <div class="container-text">
-                    <a href="#">First Time Home Owner Ideas <br />
-                        <span>by</span> Kristin Watson <span>on</span> Dec 19, 2021
-                    </a>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="img-container">
-                    <img src="./images/post-2.jpg" alt="" />
-                </div>
-                <div class="container-text">
-                    <a href="#">How To Keep Your Furniture Clean <br />
-                        <span>by</span> Robert Fox <span>on</span> Dec 15, 2021
-                    </a>
-                </div>
-            </div>
-            <div class="container">
-                <div class="img-container">
-                    <img src="./images/post-3.jpg" alt="" />
-                </div>
-                <div class="container-text">
-                    <a href="#">Small Space Furniture Apartment Ideas <br />
-                        <span>by</span> Kristin Watson <span>on</span> Dec 12, 2021</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- blog end -->
-    <!-- Contact us start -->
-    <div class="contact">
-        <div class="contact-form">
-            <h3 class="form-header"><i class="fa-regular fa-envelope"></i>Subscribe to Newsletter</h3>
-            <div class="form-body">
-                <input type="text" class="name" placeholder="Enter your name">
-                <input type="email" class="emial" placeholder="Enter your email">
-                <button class="send-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
-            </div>
-
-        </div>
-        <div class="img-div">
-            <img src="./images/sofa.png" alt="">
-        </div>
-
-    </div>
-    <!-- Contact us end -->
-    <!-- funi start -->
-    <div class="funi">
-        <div class="funi-content">
-            <h3>Funi.</h3>
-            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
-            <div class="social">
-                <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
-                <div class="icon"><i class="fa-brands fa-twitter"></i></div>
-                <div class="icon"> <i class="fa-brands fa-instagram"></i></div>
-                <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
-            </div>
-        </div>
-        <div class="menu-list">
-            <ul class="menu-one">
-                <li>About us</li>
-                <li>Services</li>
-                <li>Blog</li>
-                <li>Contact us</li>
-            </ul>
-            <ul class="menu-two">
-                <li>Support</li>
-                <li>Knowledge base</li>
-                <li>Live chat</li>
-            </ul>
-            <ul class="menu-three">
-                <li>Jobs</li>
-                <li>Our team</li>
-                <li>Leadership</li>
-                <li>Privacy Policy</li>
-            </ul>
-            <ul class="menu-four">
-                <li>Nordic Chair</li>
-                <li>Kruzo Aero</li>
-                <li>Ergonomic Chair</li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
             </ul>
         </div>
+        <!-- footer end -->
+    </footer>
 
-    </div>
-    <!-- funi end -->
-    <!-- footer start -->
-    <div class="footer">
-        <p>Copyright ©2026. All Rights Reserved. — Designed with love by <a href="#">Untree.co</a>
+    <!-- footer section end -->
 
-        </p>
-        <ul>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-        </ul>
-    </div>
-    <!-- footer end -->
     <script src="script.js">
 
     </script>

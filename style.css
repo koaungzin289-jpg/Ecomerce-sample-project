@@ -44,13 +44,17 @@
   border-radius: 8px;
   bottom: 15px;
 }
+.navbar-content {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
 .navbar .navbar-menu ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5rem;
-  /* margin-left: 15rem; */
+  gap: 3rem;
 }
 .navbar-menu {
   position: relative;
@@ -77,7 +81,7 @@
 .navbar .navbar-menu ul li:hover::after {
   width: 100%;
 }
-.navbar .navbar-btn {
+.navbar .navbar-content .navbar-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -87,7 +91,26 @@
   font-size: 20px;
   cursor: pointer;
 }
+.hambager-menu {
+  cursor: pointer;
+  display: none;
+}
+.hambager-menu .line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--bg-color);
+  margin-top: 5px;
+}
 /* navbar section end */
+/* main section start */
+main {
+  display: none;
+  min-height: 50vh;
+}
+.active {
+  display: block;
+}
+/* main section end */
 /* home section start */
 .home {
   background-color: var(--primary-color);
@@ -971,8 +994,14 @@
     padding-left: 5%;
     padding-right: 5%;
   }
+  .navbar-content {
+    gap: 3rem;
+  }
   .navbar .navbar-menu ul {
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  .navbar .navbar-content .navbar-btn {
+    gap: 1.5rem;
   }
   .contact {
     margin: 50px 5%;
@@ -990,8 +1019,11 @@
   .navbar-btn i {
     display: none;
   }
+  .hambager-menu {
+    display: block;
+  }
   .home-text {
-    padding-left: 15%;
+    padding: 0 15%;
   }
   .home-photo img {
     left: 15%;
