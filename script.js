@@ -1,5 +1,5 @@
 // main start
-const mainPage = document.querySelectorAll("main");
+const mainPage = document.querySelectorAll("section");
 const changePage = (e) => {
   const id = e.target.dataset.page;
   mainPage.forEach((page) => {
