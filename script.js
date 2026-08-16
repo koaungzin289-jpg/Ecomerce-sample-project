@@ -30,74 +30,74 @@ for (let i = 0; i < navItem.length; i++) {
 // navbar slide end
 
 // carousel start
-const carouselInner = document.querySelector(".carousel-inner");
-const originalSlides = document.querySelectorAll(".carousel-item");
-const dots = document.querySelectorAll(".dot");
-const totalSlides = originalSlides.length;
-const nextButton = document.querySelector("#next");
-const prevButton = document.querySelector("#prev");
+const carousels = document.querySelectorAll(".carousel-container");
+carousels.forEach((carousel) => {
+  const carouselInner = carousel.querySelector(".carousel-inner");
+  const originalSlides = carousel.querySelectorAll(".carousel-item");
+  const dots = carousel.querySelectorAll(".dot");
+  const totalSlides = originalSlides.length;
+  const firstClone = originalSlides[0].cloneNode(true);
+  carouselInner.append(firstClone);
+  const lastClone = originalSlides[totalSlides - 1].cloneNode(true);
+  carouselInner.insertBefore(lastClone, originalSlides[0]);
 
-let firstClone = originalSlides[0].cloneNode(true);
-carouselInner.append(firstClone);
-let lastClone = originalSlides[totalSlides - 1].cloneNode(true);
-carouselInner.insertBefore(lastClone, originalSlides[0]);
-
-let slides = document.querySelectorAll(".carousel-item");
-let slideWidth = 100;
-let currentIndex = 1;
-let isMoving = false;
-carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-
-// update dots
-function updateDots() {
-  let activeIndex = currentIndex - 1;
-  if (activeIndex >= totalSlides) {
-    activeIndex = 0;
-  }
-  if (activeIndex < 0) {
-    activeIndex = totalSlides - 1;
-  }
-  dots.forEach((dot) => {
-    dot.classList.remove("active");
-  });
-  dots[activeIndex].classList.add("active");
-}
-// show slide
-function showSlides() {
-  carouselInner.style.transition = "transform 0.5s ease-in-out";
+  // assign current index
+  let currentIndex = 1;
+  let isMoving = false;
+  let slideWidth = 100;
   carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-  updateDots();
-}
-// next/prev
-function moveSlides(direction) {
-  if (isMoving) return;
-  isMoving = true;
-  currentIndex += direction;
-  showSlides();
-}
+  const updateDot = () => {
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+    });
+    let dotIndex = currentIndex - 1;
 
-// Dot click
-function currentSlide(number) {
-  if (isMoving) return;
-  isMoving = true;
-  currentIndex = number;
-  showSlides();
-  console.log(currentIndex);
-}
-// infinite loop
-carouselInner.addEventListener("transitionend", () => {
-  carouselInner.style.transition = "none";
-  isMoving = false;
-  if (currentIndex === slides.length - 1) {
-    currentIndex = 1;
+    if (dotIndex === totalSlides) {
+      dotIndex = 0;
+    }
+    if (dotIndex < 0) {
+      dotIndex = dots.length - 1;
+    }
+    dots[dotIndex].classList.add("active");
+  };
+  const showSlide = () => {
+    if (isMoving) return;
+    isMoving = true;
+    carouselInner.style.transition = "all 0.5s ease-in-out";
     carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-  }
-  if (currentIndex === 0) {
-    currentIndex = totalSlides;
-    carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+    updateDot();
+  };
+  // update dot
+
+  // button
+  const nextButton = carousel.querySelector(".next");
+  const prevButton = carousel.querySelector(".prev");
+  nextButton.addEventListener("click", () => {
+    currentIndex++;
+    showSlide();
+  });
+
+  prevButton.addEventListener("click", () => {
+    currentIndex--;
+    showSlide();
+  });
+  carouselInner.addEventListener("transitionend", () => {
+    isMoving = false;
+    if (currentIndex >= totalSlides + 1) {
+      currentIndex = 1;
+      carouselInner.style.transition = "none";
+      carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+    }
+    if (currentIndex === 0) {
+      currentIndex = totalSlides;
+      carouselInner.style.transition = "none";
+      carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+    }
+  });
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener("click", () => {
+      currentIndex = i + 1;
+      showSlide();
+    });
   }
 });
-setInterval(() => {
-  moveSlides(1);
-}, 3000);
-// carousel end

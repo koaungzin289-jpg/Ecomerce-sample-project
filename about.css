@@ -57,11 +57,27 @@
   position: relative;
   display: flex;
   justify-content: end;
+  position: relative;
 }
 .why-us-photo img {
   width: 75%;
   position: relative;
   border-radius: 15px;
+  z-index: 3;
+}
+.why-us-photo::after {
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-image: radial-gradient(
+    var(--secondary-color) 15%,
+    transparent 18%
+  );
+  background-size: 30px 30px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: -50px;
 }
 .why-us-content h3 {
   font-size: 30px;
@@ -96,4 +112,47 @@
   position: absolute;
   top: 15px;
   left: 20px;
+}
+.about-team {
+  padding: 50px 8%;
+  background-color: var(--main-color);
+  padding-bottom: 200px;
+}
+.about-team .team-heading {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.member-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+}
+.member-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.member-card img {
+  width: 100%;
+  padding-bottom: 30px;
+}
+.member-card a {
+  color: black;
+}
+.member-card a:hover {
+  text-decoration: none;
+}
+.member-name {
+  font-size: 28px;
+  font-weight: 400;
+}
+.member-card span,
+.member-card p {
+  color: var(--text-muted);
+  padding-bottom: 20px;
+}
+#about-page {
+  padding-bottom: 200px;
 }
