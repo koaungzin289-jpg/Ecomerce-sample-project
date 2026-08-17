@@ -57,6 +57,7 @@
   position: relative;
   display: flex;
   justify-content: end;
+  align-items: center;
   position: relative;
 }
 .why-us-photo img {
@@ -116,7 +117,6 @@
 .about-team {
   padding: 50px 8%;
   background-color: var(--main-color);
-  padding-bottom: 200px;
 }
 .about-team .team-heading {
   font-size: 30px;
@@ -155,4 +155,119 @@
 }
 #about-page {
   padding-bottom: 200px;
+}
+@media (max-width: 1200px) {
+  .about-hero {
+    padding-left: 5%;
+  }
+  .about-hero-img {
+    overflow: hidden;
+  }
+  .about-hero-img img {
+    width: 120%;
+    top: -50px;
+  }
+  .about-why-us {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .why-us-list {
+    padding-top: 30px;
+  }
+  .why-list-item {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    row-gap: 0.5rem;
+  }
+  .why-us-photo img {
+    width: 80%;
+    height: 80%;
+  }
+  .about-team {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .member-group {
+    column-gap: 1rem;
+  }
+  .member-name {
+    font-size: 24px;
+  }
+  .member-card span,
+  .member-card p {
+    padding-bottom: 5px;
+  }
+}
+@media (max-width: 991px) {
+  .about-hero {
+    padding-left: 15%;
+    flex-direction: column;
+    height: auto;
+  }
+  .about-hero-img {
+    overflow: visible;
+  }
+  .about-hero-img img {
+    width: 100%;
+  }
+  .about-why-us {
+    padding-left: 15%;
+    padding-right: 15%;
+    grid-template-columns: 1fr;
+  }
+  .why-us-photo img {
+    width: 100%;
+  }
+  .why-us-photo::after {
+    left: -100px;
+  }
+  .about-team {
+    padding: 50px 15%;
+  }
+  .member-group {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+@media (max-width: 876px) {
+  .about-hero {
+    padding-left: 5%;
+  }
+
+  .about-why-us {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .why-us-photo img {
+    width: 100%;
+  }
+  .why-us-photo::after {
+    left: -100px;
+  }
+  .about-team {
+    padding: 50px 5%;
+  }
+  .member-group {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .about-hero {
+    padding-left: 15%;
+  }
+
+  .about-why-us {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .about-team {
+    padding: 50px 15%;
+  }
+  .member-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

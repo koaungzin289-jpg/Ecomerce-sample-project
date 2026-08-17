@@ -1111,7 +1111,7 @@ section {
     padding-right: 5%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
     padding: 2% 15%;
   }
