@@ -1223,3 +1223,58 @@ section {
     padding-right: 5%;
   }
 }
+/* Section page start */
+.contact-container {
+  background-color: var(--bg-color);
+  padding: 100px;
+}
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact-adress {
+  display: flex;
+  justify-content: space-between;
+}
+.adress-item {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.adress-item .icon {
+  background-color: var(--primary-color);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+.name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.input-group {
+  margin: 5px 0;
+}
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+.input-group textarea {
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  outline: none;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.sms-btn {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 15px 30px;
+  margin-bottom: 100px;
+}
