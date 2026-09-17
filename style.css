@@ -1226,7 +1226,7 @@ section {
 /* Section page start */
 .contact-container {
   background-color: var(--bg-color);
-  padding: 100px;
+  padding: 100px 8%;
 }
 .form-container {
   max-width: 800px;
@@ -1272,9 +1272,40 @@ section {
   padding: 15px;
   margin-bottom: 20px;
 }
+.input-group textarea:focus,
+.input-group input:focus {
+  outline: 1px solid var(--primary-color);
+}
 .sms-btn {
   background-color: #1d1d1d;
   color: white;
   padding: 15px 30px;
   margin-bottom: 100px;
+}
+@media (max-width: 1200px) {
+  .contact-container {
+    padding: 100px 5%;
+  }
+}
+@media (max-width: 991px) {
+  .contact-container {
+    padding: 100px 15%;
+  }
+  .contact-adress {
+    flex-direction: column;
+  }
+  .adress-item {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .name {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .input-group textarea,
+  .input-group input {
+    padding: 7px;
+  }
 }
