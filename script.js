@@ -101,3 +101,23 @@ carousels.forEach((carousel) => {
     });
   }
 });
+// Hambager menu actions
+document.querySelector(".hambager-Tabs").style.display = "none";
+document.querySelector(".hambager-menu").onclick = () => {
+  document.querySelector(".hambager-Tabs").classList.toggle("open");
+  isOpen = document.querySelector(".hambager-Tabs").classList.contains("open");
+  if (isOpen) {
+    document.querySelector(".hambager-Tabs").style.display = "block";
+  } else {
+    document.querySelector(".hambager-Tabs").style.display = "none";
+  }
+};
+const menuList = document.querySelectorAll(".hambager-nav-item");
+menuList.forEach((item) => {
+  item.addEventListener("click", () => {
+    menuList.forEach((nav) => {
+      nav.classList.remove("active");
+    });
+    item.classList.add("active");
+  });
+});

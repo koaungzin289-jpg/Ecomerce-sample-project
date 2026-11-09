@@ -1122,6 +1122,32 @@ section {
   .hambager-menu {
     display: block;
   }
+  .hambager-Tabs {
+    padding: 1% 15%;
+    list-style: none;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+  }
+  .hambager-Tabs li {
+    color: var(--text-color);
+    opacity: 0.5;
+    cursor: pointer;
+    padding-top: 20px;
+  }
+  .hambager-Tabs li.active {
+    opacity: 1;
+  }
+  .hambager-menu-btn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .hambager-menu-btn i {
+    color: var(--text-color);
+    font-size: 20px;
+    opacity: 1;
+    cursor: pointer;
+  }
   .home-text {
     padding: 0 15%;
   }
@@ -1179,7 +1205,9 @@ section {
   .navbar {
     padding: 2% 5%;
   }
-
+  .hambager-Tabs {
+    padding: 1% 5%;
+  }
   .home-text {
     padding-left: 5%;
   }

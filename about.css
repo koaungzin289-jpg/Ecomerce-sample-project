@@ -271,3 +271,20 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+@media (max-width: 576px) {
+ .about-hero {
+    padding-left: 5%;
+  }
+
+  .about-why-us {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about-team {
+    padding: 50px 5%;
+  }
+  .member-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
