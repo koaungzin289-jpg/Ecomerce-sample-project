@@ -1250,6 +1250,9 @@ section {
     padding-left: 5%;
     padding-right: 5%;
   }
+   .contact-container {
+    padding: 100px 5%;
+  }
 }
 /* Section page start */
 .contact-container {

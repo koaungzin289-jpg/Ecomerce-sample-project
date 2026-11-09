@@ -272,10 +272,12 @@
   }
 }
 @media (max-width: 576px) {
- .about-hero {
-    padding-left: 5%;
+  .about-hero {
+    padding: 2% 5%;
   }
-
+  .about-hero-img {
+    margin-top: 20px;
+  }
   .about-why-us {
     padding-left: 5%;
     padding-right: 5%;
